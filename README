@@ -1,0 +1,70 @@
+****************
+* Magic Square
+* 02-07-2019
+* Andre Murphy
+**************** 
+
+OVERVIEW:
+
+ The project creates a Magic Square and uses command line arguements
+ to execute different methods
+
+
+INCLUDED FILES:
+
+ MagicSquare.java - source file
+ MagicSquareTester.java - source file / driver
+ README - this file
+
+COMPILING AND RUNNING:
+
+ From the directory containing all source files, compile the
+ driver class (and all dependencies) with the command:
+ $ javac MagicSquareTester.java
+ $ javac MagicSquare.java
+
+ Run the compiled class file with the command:
+ 
+ $ java MagicSquareTester [-check | -create] [filename] [ |size]
+ 
+ where either a -check or -create flag and a filename are required. 
+ The size should only be be included when the create flag is used.
+ *****YOU WILL NEED TO SET YOUR ARGUEMENTS INSIDE OF YOUR CHOSEN IDE
+The -check flag indicates that your program will determine whether 
+the file called filename contains a Magic Square and will print out the appropriate message.
+For instance, to determine whether the file called myMatrix.txt,
+ which contains the 4 x 4 Magic Square from the first example above, 
+ you would use the following command-line syntax:
+
+ --->   java MagicSquareTester -check myMatrix.txt
+
+ Console output will give the results after the program finishes.
+
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+	The driver class of the project passes in user set user input and then
+ utilizes the input to run specific functions of the Magic Square.
+ The first command, -check, will first go into the check method, pass it into
+ the read method which will parse the file into ints so the check file can
+ run through and check whether the sums of diagonals, rows, and columns all equal
+ the same number.
+	The -create command will take in a filename and a size and run it through the
+ createMagicSquare method and the end of this method will call the writeMatrix
+ with the passed in filename and write it to a file by iterating through rows and
+ columns then using a print writer to add it to a file it WILL create.
+
+
+TESTING:
+
+ We were given many examples of valid and invalid matrix squares. The first errors
+ I handled were argument input exceptions. I handled them with a few if statements to 
+ check if the arguments were correct, if the size when creating was odd, and if the existed.
+ The MagicSquare.checkMatrix(); was the bulk of the testing and ran through every row, column,
+ and diagonal to make sure the sums were all equal to the Magic Square number.
+
+
+
+ 
+ 
+ EXTRA CREDIT: N/A
