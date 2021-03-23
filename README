@@ -62,9 +62,3 @@ TESTING:
  check if the arguments were correct, if the size when creating was odd, and if the existed.
  The MagicSquare.checkMatrix(); was the bulk of the testing and ran through every row, column,
  and diagonal to make sure the sums were all equal to the Magic Square number.
-
-
-
- 
- 
- EXTRA CREDIT: N/A
